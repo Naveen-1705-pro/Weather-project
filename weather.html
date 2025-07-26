@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Weather App</title>
+    <meta name="description" content="Stunning Weather App with Animations">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="weather-background" class="weather-background">
+        <div id="weather-effects" class="weather-effects"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="app-title">⛈️ Weather App</h1>
+            <p class="app-subtitle">Beautiful weather forecasts with live animations</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-card glass-card">
+                <form id="search-form" class="search-form">
+                    <div class="input-group">
+                        <span class="search-icon">🔍</span>
+                        <input 
+                            type="text" 
+                            id="city-input" 
+                            placeholder="Enter city name..." 
+                            class="city-input"
+                        >
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" id="search-btn" class="search-btn">
+                            <span id="search-text">Search Weather</span>
+                        </button>
+                        <button type="button" id="location-btn" class="location-btn" title="Use current location">
+                            📍
+                        </button>
+                    </div>
+                </form>
+                <p class="search-hint">Search for any city or use your current location</p>
+            </div>
+        </section>
+
+        <section id="error-section" class="error-section hidden">
+            <div class="error-card glass-card">
+                <div class="error-content">
+                    <div class="error-icon">⚠️</div>
+                    <h3 class="error-title">Oops! Something went wrong</h3>
+                    <p id="error-message" class="error-message"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="loading-section" class="loading-section hidden">
+            <div class="loading-card glass-card">
+                <div class="loading-content">
+                    <div class="loading-icon">🌤️</div>
+                    <p class="loading-text">Loading weather data...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="weather-section" class="weather-section hidden">
+            <div class="weather-card glass-card">
+                <div class="datetime-section">
+                    <div id="current-day" class="current-day"></div>
+                    <div id="current-date" class="current-date"></div>
+                    <div id="current-time" class="current-time"></div>
+                </div>
+                <div class="location-section">
+                    <h2 id="location-name" class="location-name"></h2>
+                    <p id="location-country" class="location-country"></p>
+                </div>
+
+        
+                <div class="main-weather">
+                    <div id="weather-icon" class="weather-icon-large"></div>
+                    <div id="temperature" class="temperature"></div>
+                    <p id="weather-description" class="weather-description"></p>
+                </div>
+
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <div class="detail-label">Feels Like</div>
+                        <div id="feels-like" class="detail-value"></div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Humidity</div>
+                        <div id="humidity" class="detail-value"></div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Wind</div>
+                        <div id="wind-speed" class="detail-value"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="forecast-section" class="forecast-section hidden">
+            <div class="forecast-card glass-card">
+                <h2 class="forecast-title">5-Day Forecast</h2>
+                <div id="forecast-container" class="forecast-container"></div>
+            </div>
+        </section>
+    </div>
+
+    
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
