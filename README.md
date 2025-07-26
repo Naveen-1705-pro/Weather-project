@@ -1,5 +1,4 @@
 # Weather-project
-# Weather-project
 # WeatherApp
 
 A simple and intuitive weather application that provides current weather conditions and forecasts for various locations.
